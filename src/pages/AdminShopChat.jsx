@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { supabase } from "../supabaseClient";
 
-const API_BASE = "http://127.0.0.1:5000";
+const API_BASE = "https://klcntt.onrender.com";
 
 function fmtTime(iso) {
   if (!iso) return "";
@@ -663,3 +663,4 @@ statusText: {
 },
 
 };
+
