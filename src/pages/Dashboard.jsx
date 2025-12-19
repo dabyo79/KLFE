@@ -726,10 +726,12 @@ const flaskLineData = {
         return;
       }
 
-      const hour = d.getHours();
-      if (hour >= 0 && hour < 24) {
-        counts[hour] = (counts[hour] || 0) + 1;
-      }
+      const hour = Number(new Intl.DateTimeFormat("en-US", {
+        timeZone: "Asia/Ho_Chi_Minh",
+        hour: "2-digit",
+        hour12: false
+      }).format(d));
+
     });
 
     const allLabels = Array.from({ length: 24 }, (_, h) =>
@@ -2961,4 +2963,5 @@ const growthArrowPlugin = {
     </div>
   );
 }
+
 
