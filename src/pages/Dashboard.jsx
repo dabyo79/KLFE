@@ -146,7 +146,7 @@ export default function Dashboard() {
     const loadFlask = async () => {
       try {
         setFlaskLoading(true);
-        const res = await fetch("http://127.0.0.1:5000/admin/api/stats_json");
+        const res = await fetch("https://klcntt.onrender.com/admin/api/stats_json");
         const data = await res.json();
         setFlaskData(data);
         setPriceBucketStats(data.price_query_buckets || {});
@@ -2961,3 +2961,4 @@ const growthArrowPlugin = {
     </div>
   );
 }
+
