@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 
-const API_BASE = "http://127.0.0.1:5000";
+const API_BASE = "https://klcntt.onrender.com";
 
 const STATUS_OPTIONS = [
   "Chờ xác nhận",
@@ -731,4 +731,5 @@ function OrderDetailPanel({ detail }) {
     </div>
   );
 }
+
 
