@@ -123,7 +123,7 @@ export default function Users() {
     setLoadingStats(true)
     try {
       const res = await fetch(
-        `http://127.0.0.1:5000/admin/api/user_stats?user_id=${user.id}`
+        `https://klcntt.onrender.com/admin/api/user_stats?user_id=${user.id}`
       )
       const data = await res.json()
       setUserStats(data)
@@ -578,3 +578,4 @@ export default function Users() {
     </div>
   )
 }
+
