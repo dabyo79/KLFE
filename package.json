@@ -17,7 +17,9 @@
     "@supabase/supabase-js": "^2.80.0",
     "bootstrap": "^5.3.8",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+        "react-chartjs-2": "^5.3.1",
+        "react-dom": "^19.1.1",
+        "react-router-dom": "^7.9.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
@@ -31,6 +33,16 @@
     "globals": "^16.4.0",
     "vite": "npm:rolldown-vite@7.1.14"
   },
+  "node_modules/react-chartjs-2": {
+      "version": "5.3.1",
+      "resolved": "https://registry.npmjs.org/react-chartjs-2/-/react-chartjs-2-5.3.1.tgz",
+      "integrity": "sha512-h5IPXKg9EXpjoBzUfyWJvllMjG2mQ4EiuHQFhms/AjUm0XSZHhyRy2xVmLXHKrtcdrPO4mnGqRtYoD0vp95A0A==",
+      "license": "MIT",
+      "peerDependencies": {
+        "chart.js": "^4.1.1",
+        "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+      }
+    },
   "overrides": {
     "vite": "npm:rolldown-vite@7.1.14"
   }
