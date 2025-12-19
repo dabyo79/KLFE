@@ -7,7 +7,7 @@ export default function Login() {
     await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: "http://localhost:5173", // giữ như hôm nãy
+        redirectTo: "https://klfe.onrender.com/", // giữ như hôm nãy
       },
     });
   };
@@ -25,3 +25,4 @@ export default function Login() {
     </div>
   );
 }
+
