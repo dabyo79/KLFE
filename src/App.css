@@ -1,0 +1,825 @@
+/* src/login.css */
+
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #1f2937 0%, #0f172a 50%, #020617 100%);
+  padding: 1rem;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  padding: 2.5rem 2.3rem 2rem;
+  width: min(420px, 100%);
+  text-align: center;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 24px 45px rgba(0, 0, 0, 0.35);
+  color: #fff;
+}
+
+.login-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+.login-sub {
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-google {
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.7rem 1rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.4);
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.btn-google:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(239, 68, 68, 0.55);
+}
+
+.btn-google:active {
+  transform: translateY(0);
+}
+.admin-orders-page {
+  padding: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.admin-orders-page h1 {
+  margin-bottom: 12px;
+}
+
+.filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.filters-row input {
+  padding: 4px 6px;
+}
+
+.filters-row select,
+.filters-row button {
+  padding: 4px 6px;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.orders-table th,
+.orders-table td {
+  border: 1px solid #ddd;
+  padding: 6px 8px;
+}
+
+.orders-table th {
+  background: #f5f5f5;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.badge-pending {
+  background: #fff3cd;
+}
+
+.badge-ready {
+  background: #cce5ff;
+}
+
+.badge-shipping {
+  background: #d4edda;
+}
+
+.badge-done {
+  background: #c3e6cb;
+}
+
+.badge-cancel {
+  background: #f8d7da;
+}
+
+.order-detail-box {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background: #fff;
+}
+
+.order-product-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.order-product-row img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.order-product-info .name {
+  font-weight: 500;
+}
+
+.order-product-info .sub {
+  font-size: 12px;
+  color: #666;
+}
+.locked-text {
+  margin-top: 4px;
+  font-size: 11px;
+  color: #9ca3af;
+  font-style: italic;
+}
+/* ---------- Layout tổng ---------- */
+.admin-orders-page {
+  padding: 24px;
+  font-family: "Inter", sans-serif;
+  color: #222;
+}
+
+.admin-orders-page h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* ---------- Filter Row ---------- */
+.filters-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 22px;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.08);
+}
+
+.filters-row input,
+.filters-row select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: 0.2s;
+  background: #fafafa;
+}
+
+.filters-row input:focus,
+.filters-row select:focus {
+  border-color: #6d5dfc;
+  background: #fff;
+}
+
+.filters-row button {
+  background: #6d5dfc;
+  color: white;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 600;
+}
+
+.filters-row button:hover {
+  background: #5849d8;
+}
+
+/* ---------- Table ---------- */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.06);
+}
+
+.orders-table th {
+  background: #f5f6fa;
+  padding: 14px 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #444;
+  border-bottom: 1px solid #eee;
+}
+
+.orders-table td {
+  max-width: 220px;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+
+.row-clickable {
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.row-clickable:hover {
+  background: #fafafa;
+}
+
+/* ---------- Status pill ---------- */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;         /* text luôn 1 dòng */
+}
+
+.status-Chờ.xác.nhận,
+.status-Chờ.xác.nhận {
+  background: #8896ff;
+}
+
+.status-Chờ.lấy.hàng {
+  background: #f8b949;
+}
+
+.status-Chờ.giao.hàng {
+  background: #4aa3ff;
+}
+
+.status-Hoàn.thành {
+  background: #4cd964;
+}
+
+.status-Đã.hủy {
+  background: #ff4757;
+}
+
+.status-Trả.hàng {
+  background: #9b59b6;
+}
+
+/* ---------- Tag yêu cầu ---------- */
+.tag {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.tag-warning { background: #ffe8a6; }
+.tag-danger { background: #ffb5b5; }
+.tag-info { background: #bcdcff; }
+.tag-muted { background: #e5e5e5; color: #555; }
+
+.tag-time {
+  opacity: 0.7;
+}
+
+/* ---------- Select + Buttons trong thao tác ---------- */
+.select-sm {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  min-width: 150px;
+}
+
+.locked-text {
+  color: #ff6b6b;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.action-row {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.btn-xs {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+}
+
+.btn-success { background: #2ecc71; }
+.btn-danger { background: #e74c3c; }
+
+.btn-success:hover { background: #28b864; }
+.btn-danger:hover { background: #c0392b; }
+
+/* ---------- Chi tiết đơn ---------- */
+.order-detail-box {
+  background: #fff;
+  padding: 20px;
+  margin-top: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 12px rgba(0,0,0,0.09);
+  animation: fadeIn 0.25s ease-out;
+}
+
+.order-detail-box h2 {
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.order-detail-box p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+.order-product-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  background: #f8f8f8;
+}
+
+.order-product-row img {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.order-product-info .name {
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.order-total {
+  font-weight: 700;
+  font-size: 15px;
+  color: #222;
+}
+
+/* Hiệu ứng */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/*======DASHBOARD=====*/
+.dashboard-ui .stat-card {
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.stat-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+}
+
+.section-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card {
+  border-radius: 16px !important;
+}
+
+.user-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-chip {
+  background: #f8f9fa;
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+.thumb-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.brand-table th {
+  font-weight: 600;
+}
+.pagination-row {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.pagination-info {
+  font-size: 13px;
+  color: #555;
+}
+.orders-table td.status-col {
+  white-space: nowrap;         /* không cho xuống dòng */
+  width: 140px;                /* tăng chút chiều rộng */
+}
+
+.top-users-podium {
+  margin-top: 0.5rem;
+}
+
+/* Card chung */
+.podium-card {
+  min-width: 160px;
+}
+
+/* Avatar lớn – độ cao khác nhau cho 1 / 2 / 3 */
+.podium-avatar {
+  border-radius: 999px;
+  object-fit: cover;
+  border: 3px solid #111827;
+  background: #f9fafb;
+}
+
+/* Top 1 ở giữa: to nhất, cao nhất */
+.podium-first .podium-avatar {
+  width: 60px;
+  height: 60px;
+}
+.podium-first {
+  transform: translateY(0);
+}
+
+/* Top 2 bên trái: nhỏ hơn chút, thấp hơn */
+.podium-second .podium-avatar {
+  width: 50px;
+  height: 50px;
+}
+.podium-second {
+  transform: translateY(12px);
+}
+
+/* Top 3 bên phải: nhỏ hơn nữa, thấp hơn */
+.podium-third .podium-avatar {
+  width: 40px;
+  height: 40px;
+}
+.podium-third {
+  transform: translateY(20px);
+}
+
+/* Huy hiệu số thứ hạng */
+.podium-badge {
+  position: absolute;
+  right: -4px;
+  bottom: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.35);
+}
+
+.podium-badge-first {
+  background: #facc15; /* vàng */
+  color: #111827;
+}
+
+.podium-badge-second {
+  background: #e5e7eb; /* xám bạc */
+  color: #111827;
+}
+
+.podium-badge-third {
+  background: #fb923c; /* cam */
+  color: #fff;
+}
+/* Thanh chung 1 dòng */
+.channel-multi-bar {
+  width: 100%;
+  height: 12px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(148, 163, 184, 0.15); /* nền xám nhạt phía dưới */
+  display: flex;
+}
+
+/* Mỗi đoạn trong thanh */
+.channel-multi-seg {
+  height: 100%;
+}
+
+/* Đoạn 0: ví dụ Chatbot – xanh dương đậm -> trung bình */
+.channel-multi-seg-0 {
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+}
+
+/* Đoạn 1: App Android – cyan như hình bạn gửi */
+.channel-multi-seg-1 {
+  background: linear-gradient(90deg, #22d3ee, #06b6d4);
+}
+
+/* Nếu sau này có thêm kênh thứ 3,4... thì khai thêm màu ở đây */
+.channel-multi-seg-2 {
+  background: linear-gradient(90deg, #a855f7, #6366f1);
+}
+
+/* Chấm màu ở legend dưới thanh */
+.channel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.channel-dot-0 {
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+}
+
+.channel-dot-1 {
+  background: linear-gradient(90deg, #22d3ee, #06b6d4);
+}
+
+.channel-dot-2 {
+  background: linear-gradient(90deg, #a855f7, #6366f1);
+}
+.order-detail-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  margin-top: 16px;
+}
+
+.order-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.order-detail-title {
+  margin: 0;
+  font-size: 18px;
+}
+
+.order-detail-title span {
+  font-weight: 600;
+}
+
+.order-detail-sub {
+  font-size: 13px;
+  color: #757575;
+  margin-top: 2px;
+}
+
+/* pill trạng thái */
+.detail-status-pill {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #e3f2fd;
+  color: #1e88e5;
+  white-space: nowrap;
+}
+.detail-status-pill1 {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #e3f2fd;
+  color: #000000;
+  white-space: nowrap;
+}
+/* lưới thông tin */
+.order-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px 24px;
+  margin-top: 8px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 14px;                   /* tăng nhẹ lên */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #161515;                    /* đậm hơn #9e9e9e */
+  font-weight: 600;                  /* đậm hơn */
+  margin-bottom: 5px;
+}
+
+
+.detail-value {
+  font-size: 13px;
+  color: #1e2536;                    /* đậm hơn #212121 một chút */
+}
+
+
+.detail-total {
+  color: #d32f2f;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* ghi chú */
+.detail-note-block {
+  margin-top: 16px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #fffde7;               /* vàng rất nhạt */
+  border: 1px solid #ffe082;
+}
+
+.detail-note-block .detail-label {
+  color: #f57c00;                    /* cam nhấn mạnh */
+  font-size: 12px;
+}
+
+.detail-note-block .detail-value {
+  margin-top: 2px;
+}
+
+
+/* section hủy/trả & sản phẩm */
+.detail-section {
+  margin-top: 16px;
+}
+
+.detail-section-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* tag thông tin phụ */
+.detail-tag {
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.detail-tag-label {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.detail-tag-body {
+  font-size: 13px;
+}
+
+.detail-tag-time {
+  font-size: 12px;
+  color: #616161;
+}
+
+/* các màu khác nhau cho từng loại */
+.detail-tag-warning {
+  background: #fff8e1;
+  color: #8d6e00;
+}
+
+.detail-tag-danger {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.detail-tag-info {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.detail-tag-muted {
+  background: #f5f5f5;
+  color: #616161;
+}
+
+.detail-empty {
+  font-size: 13px;
+  color: #757575;
+}
+
+/* sản phẩm trong chi tiết */
+.order-products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.order-product-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.order-product-row:last-child {
+  border-bottom: none;
+}
+
+.order-product-img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #f5f5f5;
+}
+
+.order-product-info .name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.order-product-info .sub {
+  font-size: 13px;
+  color: #616161;
+}
+.order-detail-total-row {
+  margin-top: 12px;
+  padding: 12px 16px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 8px;
+  background: #fff;
+  border-radius: 0 0 12px 12px;
+}
+
+.order-detail-total-row .label {
+  font-size: 14px;
+  color: #555;
+}
+
+.order-detail-total-row .value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #d32f2f;
+}
